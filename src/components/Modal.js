@@ -33,7 +33,7 @@ class Modal extends React.Component {
     }
     componentDidMount() {
         fetch("https://findfalcone.herokuapp.com/token", {
-            method: 'POST', // or 'PUT'
+            method: 'POST',
             headers: {
                 Accept: 'application/json'
             }
@@ -55,11 +55,11 @@ class Modal extends React.Component {
                 <div className="modal-dialog">
                     <div className="modal-content">
                         <div className="modal-header p-0">
-                            <h4 className="modal-title m-0 p-0">&nbsp;</h4>
-                            {/* <button onClick={() => closeHandleFn()} type="button" className="close" data-dismiss="modal">&times;</button> */}
+                            <h4 className="modal-title text-right font-20 m-0 px-3 py-2">
+                                Time taken: <span className="time-taken">{timeTaken}</span>
+                            </h4>
                         </div>
                         <div className="modal-body px-3 py-2 text-center">
-                            <h3 className="text-right px-2">Time taken: {timeTaken}</h3>
                             {
                                 !this.state.resultime ?
                                     modalData.beginmsg ? (<>
@@ -79,6 +79,7 @@ class Modal extends React.Component {
                                             You can not Target more than one Planet
                                         </h1>
                                     </>) : modalData.warnmsg ? (<>
+                                        <p className="m-0"><img src={require(`../assets/images/warning.png`)} alt="space pod" /></p>
                                         <h1 className="text-center m-0 p-3">
                                             Enough!!!
                                         </h1>
@@ -105,9 +106,11 @@ class Modal extends React.Component {
                                                                         <p className="m-0 p-0 text-center"> to </p>
                                                                     </td>
                                                                     <td>
-                                                                        <p className="m-0 p-0 text-center">
+                                                                        <p className="m-0 p-0 text-center selected-planets">
                                                                             {
-                                                                                modalData.vehicleToPlanet.selectedPlanetsArray[index]
+                                                                                modalData.vehicleToPlanet.selectedPlanetsArray[index] ?
+                                                                                    modalData.vehicleToPlanet.selectedPlanetsArray[index] :
+                                                                                    <img src={require(`../assets/images/ic-target.png`)} alt="space pod" />
                                                                             }
                                                                         </p>
                                                                     </td>
@@ -137,7 +140,7 @@ class Modal extends React.Component {
                             }
                         </div>
                         <div className="modal-footer px-3 py-2 text-right d-flex flex-wrap justify-content-between">
-                            <button onClick={() => resetHandleFn()} type="button" className="btn btn-danger mr-3" data-dismiss="modal">Reset</button>
+                            <button onClick={() => resetHandleFn()} type="button" className="btn btn-reset mr-3" data-dismiss="modal">Reset</button>
                             {
                                 modalData.vehicleToPlanet.selectedPlanetsArray.length === 4 ? (
                                     <button onClick={() => this.findFalconeFn(modalData.vehicleToPlanet.selectedPlanetsArray, modalData.vehicleToPlanet.selectedVehiclesArray)} type="button" className="btn btn-danger" data-dismiss="modal">Find Falcone!</button>
@@ -145,7 +148,6 @@ class Modal extends React.Component {
                                     <button onClick={() => closeHandleFn()} type="button" className="btn btn-danger" data-dismiss="modal">OKAY</button>
                                 </>)
                             }
-
                         </div>
                     </div>
                 </div>
