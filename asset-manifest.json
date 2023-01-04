@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/aifalcone/static/css/main.807542cc.css",
-    "main.js": "/aifalcone/static/js/main.bc259394.js",
+    "main.js": "/aifalcone/static/js/main.c76d5c1c.js",
     "static/js/787.7788811f.chunk.js": "/aifalcone/static/js/787.7788811f.chunk.js",
     "static/media/OpenSans-Regular.otf": "/aifalcone/static/media/OpenSans-Regular.eac43145c5b6a28001db.otf",
     "static/media/OpenSans-Light.otf": "/aifalcone/static/media/OpenSans-Light.66ee2b1272fff87fca4f.otf",
@@ -32,11 +32,11 @@
     "static/media/pingasor.png": "/aifalcone/static/media/pingasor.ce4b441545c7e54dc44f.png",
     "index.html": "/aifalcone/index.html",
     "main.807542cc.css.map": "/aifalcone/static/css/main.807542cc.css.map",
-    "main.bc259394.js.map": "/aifalcone/static/js/main.bc259394.js.map",
+    "main.c76d5c1c.js.map": "/aifalcone/static/js/main.c76d5c1c.js.map",
     "787.7788811f.chunk.js.map": "/aifalcone/static/js/787.7788811f.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.807542cc.css",
-    "static/js/main.bc259394.js"
+    "static/js/main.c76d5c1c.js"
   ]
 }
