@@ -9,7 +9,7 @@ class Modal extends React.Component {
         }
     }
     findFalconeFn = (vehicles, planets) => {
-        this.setState({resultime: true});
+        this.setState({ resultime: true });
         fetch("https://findfalcone.herokuapp.com/find", {
             method: 'POST', // or 'PUT'
             headers: {
@@ -25,8 +25,10 @@ class Modal extends React.Component {
             .then((res) => {
                 return res.json();
             })
-            .then((json) => {
-                this.setState({ restatus: json })
+            .then((result) => {
+                this.setState({ restatus: result }, () => {
+                    console.log(result)
+                })
             })
     }
     componentDidMount() {
@@ -46,7 +48,7 @@ class Modal extends React.Component {
             })
     }
     render(props) {
-        const { selectPair, isModalOpen, closeHandleFn, modalData, resetHandleFn } = this.props;
+        const { selectPair, isModalOpen, closeHandleFn, modalData, timeTaken, resetHandleFn } = this.props;
         return (<>
             <div onClick={() => closeHandleFn()} className={`modal-backdrop fade ${isModalOpen ? 'show' : ''}`}></div>
             <div className={`modal fade ${isModalOpen ? 'show' : ''}`} id="myModal">
@@ -57,6 +59,7 @@ class Modal extends React.Component {
                             {/* <button onClick={() => closeHandleFn()} type="button" className="close" data-dismiss="modal">&times;</button> */}
                         </div>
                         <div className="modal-body px-3 py-2 text-center">
+                            <h3 className="text-right px-2">Time taken: {timeTaken}</h3>
                             {
                                 !this.state.resultime ?
                                     modalData.beginmsg ? (<>
@@ -116,13 +119,20 @@ class Modal extends React.Component {
                                             </table>
                                         </div>
                                     </>) : (<>
-                                        <h3 className={this.state.restatus.status === 'false' && 'd-none'}>Searching for AI Falcone...</h3>
-                                        <h1 className="col-12 p-0 m-0">{
-                                            this.state.restatus.status === 'false' ? 
-                                            'There is NO AI Falcone.' :
-                                            this.state.restatus.status === 'success' ?
-                                            'Success! Found AI Falcone' : 'Searching...'
-                                        }</h1>
+                                        <h3 className={this.state.restatus.status === 'false' && 'd-none'}>Search for AI Falcone...</h3>
+                                        {
+                                            this.state.restatus.status === 'false' ?
+                                                (<>
+                                                    <h1 className="col-12 p-0 m-0">There is NO AI Falcone.</h1>
+                                                </>) : this.state.restatus.status === 'success' ?
+                                                    (<>
+                                                        <h1 className="col-12 p-0 m-0">
+                                                            Success! Found AI Falcone in {this.state.restatus.planet_name}
+                                                        </h1>
+                                                    </>) : (<>
+                                                        <h1 className="col-12 p-0 m-0">Searching...</h1>
+                                                    </>)
+                                        }
                                     </>)
                             }
                         </div>

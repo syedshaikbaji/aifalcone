@@ -154,7 +154,7 @@ class Appwrapper extends React.Component {
         return (<>
             <Vehicles vehiclesfromapi={this.state.vehiclesfromapi} selectVehicleFn={this.selectVehicleFn} />
             <Planets planetsfromapi={this.state.planetsfromapi} selectPlanetsFn={this.selectPlanetsFn} timeTaken={this.state.timeTaken} />
-            <Modal isModalOpen={this.state.isModalOpen} closeHandleFn={this.closeHandleFn} modalData={this.state.modalData} selectPair={this.state.selectPair} resetHandleFn={this.resetHandleFn} />
+            <Modal isModalOpen={this.state.isModalOpen} closeHandleFn={this.closeHandleFn} timeTaken={this.state.timeTaken} modalData={this.state.modalData} selectPair={this.state.selectPair} resetHandleFn={this.resetHandleFn} />
         </>)
     }
 }
