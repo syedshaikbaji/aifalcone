@@ -15,8 +15,8 @@ class Vehicles extends React.Component {
                         <figcaption>
                             <p className="m-0 px-3 py-2">
                                 <span className="d-block mb-2 font-16 text-uppercase OpenSans-Bold">{vehicle.name} ({vehicle.total_no})</span>
-                                <span className="d-block mb-2"><strong>Speed: </strong> {vehicle.speed} megamiles/hour</span>
-                                <span className="d-block"><strong>Max Distance: </strong> {vehicle['max_distance']} megamiles</span>
+                                <span className="vspecs d-block mb-2"><strong>Speed: </strong> {vehicle.speed} megamiles/hour</span>
+                                <span className="vspecs d-block"><strong>Max Distance: </strong> {vehicle['max_distance']} megamiles</span>
                             </p>
                         </figcaption>
                     </figure>

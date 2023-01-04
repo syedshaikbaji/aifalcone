@@ -140,7 +140,7 @@ class Modal extends React.Component {
                             }
                         </div>
                         <div className="modal-footer px-3 py-2 text-right d-flex flex-wrap justify-content-between">
-                            <button onClick={() => resetHandleFn()} type="button" className="btn btn-reset mr-3" data-dismiss="modal">Reset</button>
+                            <button onClick={() => resetHandleFn()} type="button" className="btn btn-reset mr-3" data-dismiss="modal">Start Again</button>
                             {
                                 modalData.vehicleToPlanet.selectedPlanetsArray.length === 4 ? (
                                     <button onClick={() => this.findFalconeFn(modalData.vehicleToPlanet.selectedPlanetsArray, modalData.vehicleToPlanet.selectedVehiclesArray)} type="button" className="btn btn-danger" data-dismiss="modal">Find Falcone!</button>
