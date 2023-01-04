@@ -1,0 +1,249 @@
+@font-face {
+    font-family: 'OpenSans-Regular';
+    src: url(./fonts/OpenSans-Regular.eot);
+    src: url(./fonts/OpenSans-Regular.eot?#iefix) format('embedded-opentype'),
+        url(./fonts/OpenSans-Regular.otf) format('otf'),
+        url(./fonts/OpenSans-Regular.woff) format('woff'),
+        url(./fonts/OpenSans-Regular.ttf) format('truetype'),
+        url(./fonts/OpenSans-Regular.woff2) format('woff2');
+}
+.OpenSans-Regular {
+    font-family: 'OpenSans-Regular';
+}
+@font-face {
+    font-family: 'OpenSans-Light';
+    src: url(./fonts/OpenSans-Light.eot);
+    src: url(./fonts/OpenSans-Light.eot?#iefix) format('embedded-opentype'),
+        url(./fonts/OpenSans-Light.otf) format('otf'),
+        url(./fonts/OpenSans-Light.woff) format('woff'),
+        url(./fonts/OpenSans-Light.ttf) format('truetype'),
+        url(./fonts/OpenSans-Light.woff2) format('woff2');
+}
+.OpenSans-Light {
+    font-family: 'OpenSans-Light';
+}
+@font-face {
+    font-family: 'OpenSans-Bold';
+    src: url(./fonts/OpenSans-Bold.eot);
+    src: url(./fonts/OpenSans-Bold.eot?#iefix) format('embedded-opentype'),
+        url(./fonts/OpenSans-Bold.otf) format('otf'),
+        url(./fonts/OpenSans-Bold.woff) format('woff'),
+        url(./fonts/OpenSans-Bold.ttf) format('truetype'),
+        url(./fonts/OpenSans-Bold.woff2) format('woff2');
+}
+.OpenSans-Bold {
+    font-family: 'OpenSans-Bold';
+}
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+html {
+    font-family: sans-serif;
+    line-height: 1.15;
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
+    display: block;
+}
+hr {
+    box-sizing: content-box;
+    height: 0;
+    overflow: visible;
+}
+h1, h2, h3, h4, h5, h6 {
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+}
+p {
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
+div {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+}
+body {
+    font-family: 'OpenSans-Regular';
+    background: #2e2e2e;
+}
+.planet-section h1,
+.vehicle-section h1 {
+    font-size: 30px;
+    text-transform: uppercase;
+}
+.body-wrapper h1 span {
+    line-height: 4px;
+}
+.vehicle-section, .planet-section {
+    background: white;
+}
+.planet-section article {
+    background: url(../images/bg-dark.png) no-repeat center top / 100%;
+}
+.vehicle-section article .vehicle {
+    height: 25vh;
+}
+.planet-section article .planet {
+    height: 32vh;
+}
+.vehicle-section article .vehicle,
+.planet-section article .planet {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+figure {
+    pointer-events: none;
+}
+figure img {
+    max-width: 100px;
+    max-height: 100px;
+}
+figure figcaption {
+    font-size: 14px;
+    font-weight: 500;
+    /* text-transform: uppercase; */
+    letter-spacing: 1px;
+}
+.text-white {
+    color: white;
+}
+.planet,
+.vehicle {
+    cursor: pointer;
+}
+.planet.selected,
+.vehicle.selected {
+    opacity: 0.2;
+    pointer-events: none;
+}
+/* Modal css */
+.modal-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: all 0.5s ease-in-out;
+    pointer-events: none;
+}
+.modal-backdrop.show {
+    background: rgba(0, 0, 0, 0.5);
+    opacity: 1;
+    pointer-events: all;
+}
+.modal {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    pointer-events: none;
+}
+.modal .modal-dialog {
+    position: fixed;
+    z-index: 9;
+    width: 500px;
+    background: white;
+    border-radius: 6px;
+    left: 50%;
+    top: 0;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: all 0.5s ease-in-out;
+    pointer-events: none;
+    animation: fadeout 0.4s ease-in-out forwards;
+}
+.modal.show .modal-dialog {
+    opacity: 1;
+    pointer-events: all;
+    transition: all 0.5s ease-in-out;
+    animation: fadein 0.4s ease-in-out forwards;
+}
+@keyframes fadein {
+    from {
+        top: 0%;
+    }
+    to {
+        top: 40%;
+    }
+}
+@keyframes fadeout {
+    from {
+        top: 40%;
+    }
+    to {
+        top: 0%;
+    }
+}
+.colHead {
+    background: aliceblue;
+}
+.btn {
+    display: inline-block;
+    font-weight: 400;
+    text-align: center;
+    border: 1px solid transparent;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: .25rem;
+    cursor: pointer;
+}
+.btn-danger {
+    color: #fff;
+    background-color: #dc3545;
+    border-color: #dc3545;
+}
+/* Modal css END */
+.table {
+    width: 100%;
+    margin-bottom: 1rem;
+    color: #212529;
+    border-collapse: collapse;
+}
+.table th,
+.table td {
+    padding: 0.75rem;
+    vertical-align: top;
+    border-top: 1px solid #dee2e6;
+}
+.table thead th {
+    vertical-align: bottom;
+    border-bottom: 2px solid #dee2e6;
+}
+.table tbody+tbody {
+    border-top: 2px solid #dee2e6;
+}
+.table-bordered {
+    border: 1px solid #dee2e6;
+}
+.table-bordered th,
+.table-bordered td {
+    border: 1px solid #dee2e6;
+}
+.table-bordered thead th,
+.table-bordered thead td {
+    border-bottom-width: 2px;
+}
+.timeTaken-block{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+.timeTaken-block h4{
+    background: #009688;
+    display: inline-block;
+    padding: 8px 16px;
+    border-radius: 8px;
+    margin: 0;
+    margin-top: -85px;
+    color: white;
+    text-transform: uppercase;
+}
