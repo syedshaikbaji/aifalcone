@@ -11,7 +11,7 @@ class Modal extends React.Component {
     findFalconeFn = (vehicles, planets) => {
         this.setState({ resultime: true });
         fetch("https://findfalcone.herokuapp.com/find", {
-            method: 'POST', // or 'PUT'
+            method: 'POST',
             headers: {
                 Accept: 'application/json',
                 "Content-Type": 'application/json; charset=UTF-8'

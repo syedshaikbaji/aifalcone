@@ -2,9 +2,6 @@ import React, { Children } from "react";
 
 
 class Vehicles extends React.Component {
-    // constructor(props) {
-    //     super(props);
-    // }
     render() {
         const { vehiclesfromapi, selectVehicleFn } = this.props;
         const printVehicles = vehiclesfromapi.map((vehicle, index) => {

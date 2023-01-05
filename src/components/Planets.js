@@ -1,9 +1,6 @@
 import React from "react";
 
 class Planets extends React.Component {
-    constructor(props) {
-        super(props);
-    }
     render() {
         const { planetsfromapi, selectPlanetsFn, timeTaken } = this.props;
         const printPlanets = planetsfromapi.map((planet) => {
