@@ -37,7 +37,7 @@ class Appwrapper extends React.Component {
                 selectedVehiclesArray: [...this.state.selectedVehiclesArray, selected.name],
                 vehiclesfromapi: [...newVehicles],
                 selectPair: true,
-                beginBool: false
+                beginBool: false 
             }, () => {
                 selected.total_no === 0 && event.target.classList.add('selected');
                 this.modalOpen(null);
