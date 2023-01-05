@@ -63,80 +63,85 @@ class Modal extends React.Component {
                             {
                                 !this.state.resultime ?
                                     modalData.beginmsg ? (<>
-                                        <h1 className="text-center m-0 p-3">
+                                        <img className="pt-3" src={require(`../assets/images/warning.png`)} alt="warning" />
+                                        <h2 className="text-center m-0 pt-0 pb-3">
                                             Lets do one thing! <br />
                                             Select Vehicle First!!
-                                        </h1>
+                                        </h2>
                                     </>) : modalData.cantgomsg ? (<>
-                                        <h1 className="text-center m-0 p-3">It cannot reach this Planet</h1>
-                                        <h3 className="text-center m-0 p-3">Vehicle's Max Distance is lower than the Planets Distance</h3>
-                                    </>) : modalData.condmsg ? selectPair ? (<>
-                                        <h1 className="text-center m-0 p-3">
-                                            Choose a planet <br /> to search for AI Falcone!
-                                        </h1>
-                                    </>) : (<>
-                                        <h1 className="text-center m-0 p-3">
-                                            You can not Target more than one Planet
-                                        </h1>
-                                    </>) : modalData.warnmsg ? (<>
-                                        <p className="m-0"><img src={require(`../assets/images/warning.png`)} alt="space pod" /></p>
-                                        <h1 className="text-center m-0 p-3">
-                                            Enough!!!
-                                        </h1>
-                                        <h3 className="text-center p-3">A maximum of FOUR planets can be targeted at once.</h3>
-                                    </>) : (<>
-                                        <div className="col-12 p-0">
-                                            <table className="table table-bordered m-0">
-                                                <thead>
-                                                    <tr>
-                                                        <th className="colHead">Selected Vehicles</th>
-                                                        <th className="colHead"> - </th>
-                                                        <th className="colHead">Selected Planets</th>
-                                                    </tr>
-                                                </thead>
-                                                <tbody>
-                                                    {modalData.vehicleToPlanet.selectedVehiclesArray.map(
-                                                        (item, index) => {
-                                                            return (
-                                                                <tr key={index}>
-                                                                    <td>
-                                                                        <p className="m-0 p-0 text-center"> {item}</p>
-                                                                    </td>
-                                                                    <td>
-                                                                        <p className="m-0 p-0 text-center"> to </p>
-                                                                    </td>
-                                                                    <td>
-                                                                        <p className="m-0 p-0 text-center selected-planets">
-                                                                            {
-                                                                                modalData.vehicleToPlanet.selectedPlanetsArray[index] ?
-                                                                                    modalData.vehicleToPlanet.selectedPlanetsArray[index] :
-                                                                                    <img src={require(`../assets/images/ic-target.png`)} alt="space pod" />
-                                                                            }
-                                                                        </p>
-                                                                    </td>
-                                                                </tr>
-                                                            )
-                                                        }
-                                                    )}
-                                                </tbody>
-                                            </table>
-                                        </div>
-                                    </>) : (<>
-                                        <h3 className={this.state.restatus.status === 'false' && 'd-none'}>Search for AI Falcone...</h3>
-                                        {
-                                            this.state.restatus.status === 'false' ?
-                                                (<>
-                                                    <h1 className="col-12 p-0 m-0">There is NO AI Falcone.</h1>
-                                                </>) : this.state.restatus.status === 'success' ?
+                                        <img className="pt-3" src={require(`../assets/images/warning.png`)} alt="warning" />
+                                        <h2 className="text-center m-0 pt-0 pb-3">It cannot reach this Planet</h2>
+                                        <h3 className="text-center m-0 pt-0 pb-3">Vehicle's Max Distance is lower than the Planets Distance</h3>
+                                    </>) : modalData.condmsg ?
+                                        selectPair ? (<>
+                                            <img className="pt-3" src={require(`../assets/images/warning.png`)} alt="warning" />
+                                            <h2 className="text-center m-0 pt-0 pb-3">
+                                                Choose a planet <br /> to search for AI Falcone!
+                                            </h2>
+                                        </>) : (<>
+                                            <img className="pt-3" src={require(`../assets/images/warning.png`)} alt="warning" />
+                                            <h2 className="text-center m-0 pt-0 pb-3">
+                                                You can not Target more than one Planet
+                                            </h2>
+                                        </>) : modalData.warnmsg ? (<>
+                                            <img className="pt-3" src={require(`../assets/images/warning.png`)} alt="warning" />
+                                            <h2 className="text-center m-0 pt-0 pb-3">
+                                                Enough!!!
+                                            </h2>
+                                            <h3 className="text-center p-3">A maximum of FOUR planets can be targeted at once.</h3>
+                                        </>) : (<>
+                                            <div className="col-12 p-0">
+                                                <table className="table table-bordered m-0">
+                                                    <thead>
+                                                        <tr>
+                                                            <th className="colHead">Selected Vehicles</th>
+                                                            <th className="colHead"> - </th>
+                                                            <th className="colHead">Selected Planets</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        {modalData.vehicleToPlanet.selectedVehiclesArray.map(
+                                                            (item, index) => {
+                                                                return (
+                                                                    <tr key={index}>
+                                                                        <td>
+                                                                            <p className="m-0 p-0 text-center"> {item}</p>
+                                                                        </td>
+                                                                        <td>
+                                                                            <p className="m-0 p-0 text-center"> to </p>
+                                                                        </td>
+                                                                        <td>
+                                                                            <p className="m-0 p-0 text-center selected-planets">
+                                                                                {
+                                                                                    modalData.vehicleToPlanet.selectedPlanetsArray[index] ?
+                                                                                        modalData.vehicleToPlanet.selectedPlanetsArray[index] :
+                                                                                        <img src={require(`../assets/images/ic-target.png`)} alt="space pod" />
+                                                                                }
+                                                                            </p>
+                                                                        </td>
+                                                                    </tr>
+                                                                )
+                                                            }
+                                                        )}
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </>) : (<>
+                                            <h3 className={this.state.restatus.status === 'false' && 'd-none'}>Search for AI Falcone...</h3>
+                                            {
+                                                this.state.restatus.status === 'false' ?
                                                     (<>
-                                                        <h1 className="col-12 p-0 m-0">
-                                                            Success! Found AI Falcone in {this.state.restatus.planet_name}
-                                                        </h1>
-                                                    </>) : (<>
-                                                        <h1 className="col-12 p-0 m-0">Searching...</h1>
-                                                    </>)
-                                        }
-                                    </>)
+                                                        <h2 className="col-12 p-0 m-0">There is NO AI Falcone.</h2>
+                                                    </>) : this.state.restatus.status === 'success' ?
+                                                        (<>
+                                                            <h2 className="col-12 p-0 m-0">
+                                                                Success! Found AI Falcone in {this.state.restatus.planet_name}
+                                                            </h2>
+                                                        </>) : (<>
+                                                            <h2 className="col-12 p-0 m-0">Searching...</h2>
+                                                        </>)
+                                            }
+                                        </>)
                             }
                         </div>
                         <div className="modal-footer px-3 py-2 text-right d-flex flex-wrap justify-content-between">

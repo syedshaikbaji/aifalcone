@@ -147,8 +147,10 @@ figure figcaption {
     opacity: 0.2;
     pointer-events: none;
 }
-.vehicle .vspecs{
-    opacity: 0.5;
+.vehicle .vspecs,
+.planet .pspecs{
+    font-weight: bold;
+    opacity: 0.3;
 }
 /* Modal css */
 .modal-backdrop {
@@ -214,6 +216,13 @@ figure figcaption {
 .modal-title{
     background: lightgray;
 }
+.modal-body h2{
+    color: lightcoral;
+    line-height: 36px;
+}
+.modal-footer{
+    border-top: solid 1px lightgrey;
+}
 .time-taken{
     display: inline-block;
     width: 50px;
@@ -233,7 +242,7 @@ figure figcaption {
     font-weight: 400;
     text-align: center;
     border: 1px solid transparent;
-    padding: 8px 16px;
+    padding: 4px 16px;
     font-size: 16px;
     line-height: 1.5;
     border-radius: 4px;

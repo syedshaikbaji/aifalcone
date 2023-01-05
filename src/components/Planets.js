@@ -14,7 +14,7 @@ class Planets extends React.Component {
                         <figcaption className="text-white">
                             <p className="m-0 px-3 py-2">
                                 <span className="d-block mb-2 font-18 text-uppercase OpenSans-Bold">{planet.name}</span>
-                                <span className="d-block"><strong>Distance: </strong> {planet.distance} megamiles</span>
+                                <span className="pspecs d-block"><strong>Distance: </strong> {planet.distance} megamiles</span>
                             </p>
                         </figcaption>
                     </figure>
