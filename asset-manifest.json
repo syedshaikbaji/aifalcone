@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/aifalcone/static/css/main.807542cc.css",
-    "main.js": "/aifalcone/static/js/main.c76d5c1c.js",
+    "main.css": "/aifalcone/static/css/main.f7b33733.css",
+    "main.js": "/aifalcone/static/js/main.d613bed6.js",
     "static/js/787.7788811f.chunk.js": "/aifalcone/static/js/787.7788811f.chunk.js",
     "static/media/OpenSans-Regular.otf": "/aifalcone/static/media/OpenSans-Regular.eac43145c5b6a28001db.otf",
     "static/media/OpenSans-Light.otf": "/aifalcone/static/media/OpenSans-Light.66ee2b1272fff87fca4f.otf",
@@ -18,11 +18,7 @@
     "static/media/OpenSans-Regular.woff2": "/aifalcone/static/media/OpenSans-Regular.4ed8dbece213f6100a9e.woff2",
     "static/media/OpenSans-Light.woff2": "/aifalcone/static/media/OpenSans-Light.512a3e1a4fa81787b533.woff2",
     "static/media/OpenSans-Bold.woff2": "/aifalcone/static/media/OpenSans-Bold.d962b0e2a793312fb2b9.woff2",
-    "static/media/ic-target.png": "/aifalcone/static/media/ic-target.3d9843a1592e7089ea26.png",
-    "static/media/space-ship-2x.png": "/aifalcone/static/media/space-ship-2x.1e546aefa75682abdca9.png",
-    "static/media/space-pod-2x.png": "/aifalcone/static/media/space-pod-2x.4e225b70a1c47fe45ff0.png",
-    "static/media/space-rocket-2x.png": "/aifalcone/static/media/space-rocket-2x.13685de33d43f2b392be.png",
-    "static/media/space-shuttle-2x.png": "/aifalcone/static/media/space-shuttle-2x.751774f5d3c74866e08a.png",
+    "static/media/ic-target-falcone.png": "/aifalcone/static/media/ic-target-falcone.3d9843a1592e7089ea26.png",
     "static/media/bg-dark.png": "/aifalcone/static/media/bg-dark.59a8284ebc6d44fe0895.png",
     "static/media/lerbin.png": "/aifalcone/static/media/lerbin.8471b9579b4bc56c761e.png",
     "static/media/donlon.png": "/aifalcone/static/media/donlon.226f2d5063a507538173.png",
@@ -31,12 +27,12 @@
     "static/media/jebing.png": "/aifalcone/static/media/jebing.e62cc966af043e1916fc.png",
     "static/media/pingasor.png": "/aifalcone/static/media/pingasor.ce4b441545c7e54dc44f.png",
     "index.html": "/aifalcone/index.html",
-    "main.807542cc.css.map": "/aifalcone/static/css/main.807542cc.css.map",
-    "main.c76d5c1c.js.map": "/aifalcone/static/js/main.c76d5c1c.js.map",
+    "main.f7b33733.css.map": "/aifalcone/static/css/main.f7b33733.css.map",
+    "main.d613bed6.js.map": "/aifalcone/static/js/main.d613bed6.js.map",
     "787.7788811f.chunk.js.map": "/aifalcone/static/js/787.7788811f.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.807542cc.css",
-    "static/js/main.c76d5c1c.js"
+    "static/css/main.f7b33733.css",
+    "static/js/main.d613bed6.js"
   ]
 }
